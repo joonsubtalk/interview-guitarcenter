@@ -1,18 +1,31 @@
 body {
   font-size: 18px;
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
 }
 
-header {
+/******************************
+*          Header             *
+******************************/
+header nav div.navContent{
+  display: none;
 }
-header nav ul{
+header nav div.navContent.show{
+  display: block;
+}
+header nav > ul{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 2em;
 }
-header nav ul li{
+/* never do ul li. Depthfirst search optimization. */
+header nav > ul > li{
   display: inline-block;
 }
+
+/******************************
+*          Main Section       *
+******************************/
 section {
   display: flex;
 }
@@ -25,4 +38,15 @@ div.tabbedMenu {
 }
 aside div.sideMenu {
   background-color: yellow;
+}
+
+/******************************
+*          Footer             *
+******************************/
+footer {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  height: 2em;
+  padding: 0em 1em;
 }
