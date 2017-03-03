@@ -1,4 +1,28 @@
+body {
+  font-size: 18px;
+}
 
+header {
+}
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2em;
+}
 header nav ul li{
   display: inline-block;
+}
+section {
+  display: flex;
+}
+
+div.main {
+  background-color: red;
+}
+div.tabbedMenu {
+  background-color: pink;
+}
+aside div.sideMenu {
+  background-color: yellow;
 }
