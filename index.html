@@ -12,83 +12,164 @@
 		jQuery may be included if you choose, but all other JS should be custom.
 		-->
 		<header>
-			<nav>
-				<ul id="navMenu">
-					<li>Guitars</li>
-					<li>Bass</li>
-					<li>Drums</li>
-					<li>Keyboards</li>
-					<li>Dj &amp; Lighting</li>
-					<li>Used Gear</li>
-					<li>Clearnace</li>
+			<nav id="navMenu" class="navMenu">
+				<ul>
+					<li id="nav01">Guitars
+						<ul class="dropdown">
+							<li>Electric Guitars</li>
+							<li>Acoustic Guitars</li>
+							<li>Acoustic-Electric Guitars</li>
+							<li>Classical Guitars</li>
+						</ul>
+					</li>
+					<li id="nav02">Bass</li>
+					<li id="nav03">Drums</li>
+					<li id="nav04">Keyboards</li>
+					<li id="nav05">Dj &amp; Lighting</li>
+					<li id="nav06">Used Gear</li>
+					<li id="nav07">Clearnace</li>
 				</ul>
-				<div id="navContent" class="navContent">
-					<ul>
-						<li class="navMenu">Electric Guitars</li>
-						<li class="navMenu">Acoustic Guitars</li>
-						<li class="navMenu">Acoustic-Electric Guitars</li>
-						<li class="navMenu">Classical Guitars</li>
-					</ul>
-				</div>
 			</nav>
 		</header>
 		<section>
 			<div class="main">
-				<img src="./images/main.jpg" class=""/>
-			</div>
-			<div class="tabbedMenu">
-				<div>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+				<div class="featured">
+					<img src="./images/main.jpg" class=""/>
 				</div>
-				<div id="tabContent" class="tabContent">
-					<div class="content deals show">deals</div>
-					<div class="content arrival">arrival</div>
-					<div class="content sign">sign</div>
-				</div>
-			</div>
-			<aside>
-				<div id="sideMenu" class="sideMenu">
-					<nav>
-						<ul>
-							<li>
-								<div>
-									<ul>
-										<li>sub-link</li>
-										<li>sub-link</li>
-										<li>sub-link</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div>
-									<ul>
-										<li>sub-link</li>
-										<li>sub-link</li>
-										<li>sub-link</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div>
-									<ul>
-										<li>sub-link</li>
-										<li>sub-link</li>
-										<li>sub-link</li>
-									</ul>
-								</div>
-							</li>
+				<div class="content">
+					<div class="tabbedMenu">
+						<ul id="tabMenu">
+							<li id="tab1" class="tab active">On Sale</li>
+							<li id="tab2" class="tab">New Arrival</li>
+							<li id="tab3" class="tab">Sign Up</li>
 						</ul>
-					</nav>
+						<div id="tabContent" class="tabContent">
+							<div id='deals' class="content deals show">
+								<h2>Headliner Deals</h2>
+								<div class="headlinerDeal">
+									<div class="deals">
+										<div class="img"><img src="./images/product1.jpg"/></div>
+										<div class="details">
+											<div class="productName">The Name of this Instrument</div>
+											<div class="oldPriceStrike"><span class="oldPrice">Was $500.00<span></div>
+											<div class="newPrice">Now $295.00</div>
+										</div>
+									</div>
+									<div class="deals">
+										<div class="img"><img src="./images/product2.jpg"/></div>
+										<div class="details">
+											<div class="productName">The Name of this Instrument</div>
+											<div class="oldPriceStrike"><span class="oldPrice">Was $500.00<span></div>
+											<div class="newPrice">Now $295.00</div>
+										</div>
+									</div>
+									<div class="deals">
+										<div class="img"><img src="./images/product3.jpg"/></div>
+										<div class="details">
+											<div class="productName">The Name of this Instrument</div>
+											<div class="oldPriceStrike"><span class="oldPrice">Was $500.00<span></div>
+											<div class="newPrice">Now $295.00</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div id='arrival' class="content arrival">
+								<h2>New Arrivals</h2>
+								<div id="newArrival">
+									loading...
+								</div>
+							</div>
+							<div id="sign" class="content sign">
+								<h2>New Account</h2>
+								<form id="newAccount">
+									<fieldset>
+										<label for="firstName">First Name:</label>
+										<input type="text" name="firstName" id="firstName" class="full">
+									</fieldset>
+									<fieldset>
+										<label for="lastName">Last Name:</label>
+										<input type="text" name="lastName" id="lastName" class="full">
+									</fieldset>
+									<fieldset>
+										<label for="email">Email Address:</label>
+										<input type="email" name="email" id="email" class="full">
+									</fieldset>
+									<fieldset>
+										<label for="password">Password:</label>
+										<input type="password" name="password" id="password" class="full">
+									</fieldset>
+									<fieldset>
+										<label for="method">Communication Method:</label>
+									  <select class="full">
+									    <option>Email</option>
+									    <option>Phone</option>
+									    <option>Carrier Pigeon</option>
+									    <option>Serenading Guitarists</option>
+									  </select>
+									</fieldset>
+									<fieldset>
+										<label for="birthday">Birthday:</label>
+										<div class="full">
+											<select id="months" class="half">
+										    <option>Month</option>
+											</select>
+											<select id="days" class="half">
+										    <option>Day</option>
+											</select>
+										</div>
+									</fieldset>
+									<fieldset>
+										<label class="hide">CreateAccount</label>
+										<button>Create Account</button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside class="sideBar">
+				<div id="sideMenu" class="sideMenu">
+					<div id="link1" class="toplevelLink">
+						<div class="link">Link1</div>
+						<div class="submenu">
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+						</div>
+					</div>
+					<div id="link2" class="toplevelLink">
+						<div class="link">Link2</div>
+						<div class="submenu">
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+						</div>
+					</div>
+					<div id="link3" class="toplevelLink">
+						<div class="link">Link3</div>
+						<div class="submenu">
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+						</div>
+					</div>
+					<div id="link4" class="toplevelLink">
+						<div class="link">Link4</div>
+						<div class="submenu">
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+							<div><a href="#">sub-link</a></div>
+						</div>
+					</div>
 				</div>
 			</aside>
 		</section>
 		<footer>
 			Copyright &copy; Guitar Center, Inc.
 		</footer>
-
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
 	</body>
 </html>
